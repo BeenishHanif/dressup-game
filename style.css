@@ -8,6 +8,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: #bfa1d4;
 }
 
 .container {
@@ -30,7 +31,7 @@ body {
 
   position: absolute;
   top: 20%;
-  left: 18%;
+  left: 20%;
 }
 
 img#teddy {
@@ -83,13 +84,13 @@ button:hover {
 }
 
 .dresses img {
-  width: 80px;
-  height: auto;
   cursor: pointer;
   transition: transform 0.2s ease;
   border: 2px solid #f472b6;
-  border-radius: 10px;
+  border-radius: 50%; /* Make it a circle */
+  object-fit: cover;  /* Ensure image covers the circle */
 }
+
 
 .dresses img:hover {
   transform: scale(1.1);
