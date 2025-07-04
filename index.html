@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plushie Teddy App</title>
+  <title>Teddy Dress Up Game</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
- <div class="container">
-  <div class="content">
-    <img id="teddy" src="images/teddy_animated.gif" alt="Teddy" />
+  <div class="game-container">
+    <div class="header">
+      What should Teddy wear today?
+    </div>
+
+    <div class="teddy-display">
+      <div class="cloud cloud1"></div>
+      <div class="cloud cloud2"></div>
+      <div class="teddy-frame">
+        <img id="teddy" src="images/teddy.png" alt="Teddy" />
+      </div>
+    </div>
+
+    <div class="dress-options">
+      <div class="dress-option" onclick="dressUp(1)" id="dress1">
+        <img src="images/dress1_icon.png" alt="Dress 1" />
+      </div>
+      <div class="dress-option" onclick="dressUp(2)" id="dress2">
+        <img src="images/dress2_icon.png" alt="Dress 2" />
+      </div>
+      <div class="dress-option" onclick="dressUp(3)" id="dress3">
+        <img src="images/dress3_icon.png" alt="Dress 3" />
+      </div>
+    </div>
+
   </div>
-
-  <!-- Dress Options -->
-  <div class="dresses">
-    <img src="images/dress1_icon.png" alt="Dress 1" onclick="dressUp(1)" />
-    <img src="images/dress2_icon.png" alt="Dress 2" onclick="dressUp(2)" />
-    <img src="images/dress3_icon.png" alt="Dress 3" onclick="dressUp(3)" />
-  </div>
-</div>
-
-
   <script src="script.js"></script>
 </body>
+
 </html>

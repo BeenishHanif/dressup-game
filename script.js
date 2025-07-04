@@ -1,22 +1,46 @@
-const teddy = document.getElementById("teddy");
-const message = document.getElementById("message");
 
+
+const teddy = document.getElementById("teddy");
 let currentDress = null;
 
 function dressUp(dressNumber) {
   dressNumber = Number(dressNumber);
 
+  document.querySelectorAll('.dress-option').forEach(option => {
+    option.classList.remove('selected');
+  });
+
   if (currentDress === dressNumber) {
-    // Remove dress and show sad teddy with a forced image reload
     teddy.src = "images/teddy_sad.png?" + new Date().getTime();
-    // message.textContent = "Teddy is sad now!";
     currentDress = null;
     console.log("Dress removed");
   } else {
-    // Change to new dress
     teddy.src = `images/teddy_dress${dressNumber}.png`;
-    // message.textContent = `Teddy loves Dress ${dressNumber}!`;
     currentDress = dressNumber;
+
+    document.getElementById(`dress${dressNumber}`).classList.add('selected');
+
+    teddy.classList.add('clicked');
+    setTimeout(() => {
+      teddy.classList.remove('clicked');
+    }, 300);
+
     console.log("Dress applied:", dressNumber);
   }
 }
+
+function resetTeddy() {
+  teddy.src = "images/teddy_animated.gif";
+  currentDress = null;
+  document.querySelectorAll('.dress-option').forEach(option => {
+    option.classList.remove('selected');
+  });
+}
+
+
+teddy.addEventListener('click', function () {
+  this.classList.add('clicked');
+  setTimeout(() => {
+    this.classList.remove('clicked');
+  }, 300);
+});
