@@ -13,7 +13,6 @@ function dressUp(dressNumber) {
   if (currentDress === dressNumber) {
     teddy.src = "images/teddy_sad.png?" + new Date().getTime();
     currentDress = null;
-    console.log("Dress removed");
   } else {
     teddy.src = `images/teddy_dress${dressNumber}.png`;
     currentDress = dressNumber;
@@ -24,8 +23,6 @@ function dressUp(dressNumber) {
     setTimeout(() => {
       teddy.classList.remove('clicked');
     }, 300);
-
-    console.log("Dress applied:", dressNumber);
   }
 }
 
