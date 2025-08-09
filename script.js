@@ -1,5 +1,3 @@
-
-
 const teddy = document.getElementById("teddy");
 let currentDress = null;
 
