@@ -25,8 +25,7 @@
     }
 
     .header {
-background: linear-gradient(to right, #eed2ff, #d49cf6);
-;
+      background: linear-gradient(to right, #eed2ff, #d49cf6);
       color: #4A5568;
       padding: 12px;
       text-align: center;
@@ -92,7 +91,6 @@ background: linear-gradient(to right, #eed2ff, #d49cf6);
     .dress-options {
       /* background: #E8EDF5; */
       background: linear-gradient(to right, #eed2ff, #d49cf6);
-
       padding: 15px;
       height: 120px;
       display: flex;
@@ -105,7 +103,7 @@ background: linear-gradient(to right, #eed2ff, #d49cf6);
     .dress-option {
       width: 65px;
       height: 60px;
- background: linear-gradient(to right, #8f53b4, #9071a4);
+      background: linear-gradient(to right, #8f53b4, #9071a4);
       border-radius: 25px;
       cursor: pointer;
       display: flex;
